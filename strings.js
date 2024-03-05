@@ -15,8 +15,8 @@ function countUppercaseLetters(str) {
 console.log(countUppercaseLetters('HellO, World!'));
 
 function combineStrings(N1, N2, S1, S2) {
-    First = S1.slice(0, N1);
-    Second = S2.slice(-N2)
+    let First = S1.slice(0, N1);
+    let Second = S2.slice(-N2)
     return (First + Second);
 }
 
