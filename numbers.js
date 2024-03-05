@@ -19,16 +19,16 @@ function calculateSegmentProduct(A, B, C) {
   
   console.log(calculateKilobytes(2048));
 
-  function calculateSegments(lengthA, lengthB) {
+function calculateSegments(lengthA, lengthB) {
     return Math.floor(lengthA / lengthB);
   }
   
   console.log(calculateSegments(10, 3));
 
-  function calculateDigitSum(twoDigitNumber) {
-    first_num = Math.floor(twoDigitNumber % 10);
-    second_num = Math.floor (twoDigitNumber / 10);
-    return Math.abs (first_num + second_num);
+function calculateDigitSum(twoDigitNumber) {
+  let first_num = Math.floor(twoDigitNumber % 10);
+  let second_num = Math.floor(twoDigitNumber / 10);
+  return Math.abs(first_num + second_num);
 }
 
 console.log(calculateDigitSum(27));
@@ -65,7 +65,7 @@ function getDayOfWeek(dayOfYear) {
   
   console.log(getDayOfWeek(1));
 
-  function countSquares(A, B, C) {
+function countSquares(A, B, C) {
     const horizontalSquares = Math.floor(A / C);
     const verticalSquares = Math.floor(B / C);
     return horizontalSquares * verticalSquares;
