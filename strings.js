@@ -29,7 +29,7 @@ function containsSubstring(S, S0) {
 console.log(containsSubstring('Hello, World!', 'World'));
 
 function replaceSubstring(S, S1, S2) {
-    S0 = S.replace(S1, S2)
+    let S0 = S.replace(S1, S2)
     return (S0);
 }
 
