@@ -12,7 +12,7 @@ function countUppercaseLetters(str) {
   return count;
 }
  
-        console.log(countUppercaseLetters('HellO, World!'));
+console.log(countUppercaseLetters('HellO, World!'));
 
 function combineStrings(N1, N2, S1, S2) {
     First = S1.slice(0, N1);
