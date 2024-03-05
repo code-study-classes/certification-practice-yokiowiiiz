@@ -73,7 +73,7 @@ function extractFileName(fullFileName) {
     return (word.split('.').slice(0, -1).join('.'));
 }
 
-console.log(extractFileName('C:/Users/username/Documents/example.txt'));
+console.log(extractFileName('/home/user/images/photo.jpg'));
 
 function encryptSentence(sentence) {
   let a = '';
