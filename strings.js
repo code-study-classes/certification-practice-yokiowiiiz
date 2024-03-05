@@ -12,7 +12,7 @@ function countUppercaseLetters(str) {
   return count;
 }
  
-console.log(countUppercaseLetters('HellO, World!'));
+console.log (countUppercaseLetters('HellO, World!'));
 
 function combineStrings(N1, N2, S1, S2) {
     let First = S1.slice(0, N1);
@@ -20,20 +20,20 @@ function combineStrings(N1, N2, S1, S2) {
     return (First + Second);
 }
 
-console.log(combineStrings(3, 2, 'Hello', 'World'));
+console.log (combineStrings(3, 2, 'Hello', 'World'));
 
 function containsSubstring(S, S0) {
     return S.includes(S0)
 }
 
-console.log(containsSubstring('Hello, World!', 'World'));
+console.log (containsSubstring('Hello, World!', 'World'));
 
 function replaceSubstring(S, S1, S2) {
     let S0 = S.replace(S1, S2)
     return (S0);
 }
 
-console.log(replaceSubstring('Hello, World!', 'World', 'Universe'))
+console.log (replaceSubstring('Hello, World!', 'World', 'Universe'))
 
 function countWordsWithSameLetters(sentence) {
     let count = 0
@@ -46,7 +46,7 @@ function countWordsWithSameLetters(sentence) {
     return (count)
 }
 
-console.log(countWordsWithSameLetters('Racecar radar level Civic'));
+console.log (countWordsWithSameLetters('Racecar radar level Civic'));
 
 function countWordsWithA(sentence) {
     let words = sentence.split(" ")
@@ -59,21 +59,21 @@ function countWordsWithA(sentence) {
     return (count)
 }
 
-console.log(countWordsWithA('This is a sample sentence.'));
+console.log (countWordsWithA('This is a sample sentence.'));
 
 function normalizeSpaces(sentence) {
    let fix = sentence.replace(/\s+/g, ' ')
     return (fix)
 }
 
-console.log(normalizeSpaces('  This  is   a   sample    sentence. '));
+console.log (normalizeSpaces('  This  is   a   sample    sentence. '));
 
 function extractFileName(fullFileName) {
     let word = fullFileName.split('/').pop();
     return (word.split('.').slice(0, -1).join('.'));
 }
 
-console.log(extractFileName('/home/user/images/photo.jpg'));
+console.log (extractFileName('/home/user/images/photo.jpg'));
 
 function encryptSentence(sentence) {
   let a = '';
@@ -90,7 +90,7 @@ function encryptSentence(sentence) {
   return word.split('').reverse().join('');
 }
 
-console.log(encryptSentence('JavaScript'));
+console.log (encryptSentence('JavaScript'));
 
 function checkBrackets(expression) {
 let stack = [];
@@ -113,6 +113,6 @@ if(stack.length > 0) {
 }
 }
 
-console.log(checkBrackets('((a + b) * (c - d))'));
+console.log (checkBrackets('((a + b) * (c - d))'));
 
 export {countUppercaseLetters, combineStrings, containsSubstring, replaceSubstring, countWordsWithSameLetters, countWordsWithA, normalizeSpaces, extractFileName, encryptSentence, checkBrackets};
