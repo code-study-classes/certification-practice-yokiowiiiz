@@ -62,7 +62,7 @@ function countWordsWithA(sentence) {
 console.log(countWordsWithA('This is a sample sentence.'));
 
 function normalizeSpaces(sentence) {
-   fix = sentence.replace(/\s+/g, ' ')
+   let fix = sentence.replace(/\s+/g, ' ')
     return (fix)
 }
 
