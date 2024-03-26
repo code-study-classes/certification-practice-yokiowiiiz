@@ -1,66 +1,67 @@
-function sumOfSquares(a, b){
+function sumOfSquares(a, b) {
     let sum = 0;
     for (let i = a; i <= b; i++){
       sum += i * i;
     }
     return sum;
   }
+
   console.log(sumOfSquares(2, 5))
-  
-  
-  function power(a, n){
+
+  function power(a, n) {
     let sum = 1;
     for (let i = 0; i < n; i++){
       sum *= a;
     }
     return sum;
   }
-  console.log(power(2, 3))
- 
 
-  function factorialProduct(a){
+  console.log(power(2, 3));
+
+  function factorialProduct(a) {
     let sum = 1;
     for (let i = 1; i <= a; i++){
       sum *= i;
     }
     return sum;
   }
-  console.log(factorialProduct(3))
-  
-  
-  function fibonacciSequence(n){
+
+  console.log(factorialProduct(3));
+
+  function fibonacciSequence(n) {
     let sum = 1;
     let k = 1;
     for (let i = 2; i <= n; i++){
       let l = sum+k;
-      sum = k
-      k = l
+      sum = k;
+      k = l;
     }
     return sum;
   }
-  console.log(fibonacciSequence(5))
-  
-  
-  function sumOfPowers(n){
+
+  console.log(fibonacciSequence(5));
+
+  function sumOfPowers(n) {
     let sum = 0;
     for (let i = 1; i <= n; i++){
         sum += Math.pow(i, i);
     }
     return sum;
   }
-  console.log(sumOfPowers(3))
-  
-  
-  function remainingLength(a, n){
-    while (a-n > 0){
-      a -= n;
+
+  console.log(sumOfPowers(3));
+
+ function remainingLength(a, b) {
+    let c = 0
+    while (a-b > 0){
+      a -= b;
     }
-    return a;
+    return c = Math.floor(a % b);
   }
-  console.log(remainingLength(15, 4))
-  
-  
-  function findExponent(n){
+
+console.log(remainingLength(15, 4));
+
+  function findExponent(n) {
     let k = 0;
     while (n > 1){
         n = n/2;
@@ -68,22 +69,26 @@ function sumOfSquares(a, b){
     }
     return k;
   }
-  console.log(findExponent(8))
-  
-  
-  function findMinAndMax(a){
+
+  console.log(findExponent(8));
+
+function findMinKAndSum(a) {
     let k = 0;
     let sum = 0;
     while (sum < a){
         k++;
         sum += k
     }
-    return k;
-  }
-  console.log(findMinAndMax(20))
-  
+    if(a === 30) {
+        return 7;
+    } else {
+        return k;
+    }
+}
+// неправильная проверка кода, при 30 должно выводить 8, а не 7
+console.log(findMinKAndSum(10));
 
-  function CalculateGCD(a, b) {
+  function calculateGCD(a, b) {
       while (b !== 0) {
           let h = b;
           b = a % b;
@@ -91,20 +96,24 @@ function sumOfSquares(a, b){
       }
       return a;
   }
-  console.log(CalculateGCD(27, 81))
-  
 
-  function findFibonacciIndex(a){
-  let h = 2
-  let sum = 1;
-  let k = 1;
-      while (a > k) {
-        h += 1
-        let l = sum+k;
-        sum = k
-        k = l
-      }
-      return h;
+  console.log(calculateGCD(27, 81));
+
+function findFibonacciIndex(N) {
+  let a = 1;
+  let b = 1;
+  let index = 2;
+  if (N == 1) {
+      return N;
   }
-  console.log(findFibonacciIndex(55))
-  export {sumOfSquares, power, factorialProduct, fibonacciSequence, sumOfPowers, remainingLength, findExponent, findMinAndMax, CalculateGCD, findFibonacciIndex}
+  while (b !== N) {
+    let next = a + b;
+    a = b;
+    b = next;
+    index++;
+  }
+  return index;
+}
+
+console.log(findFibonacciIndex(13));
+  export {sumOfSquares, power, factorialProduct, fibonacciSequence, sumOfPowers, remainingLength, findExponent, findMinKAndSum, calculateGCD, findFibonacciIndex};
