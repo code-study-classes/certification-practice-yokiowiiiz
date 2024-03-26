@@ -1,98 +1,114 @@
-function incrementIfPositive() {
+function incrementIfPositive(number) {
     if (number > 0)
     return number + 1;
     else {
         return number;
     }
 }
-console.log(incrementIfPositive)
+console.log(incrementIfPositive(5));
 
 function getIndexOfSmallerNumber(number1, number2) {
-    if (5 < 3) {
+    if (number1 < number2) {
         return 1;
-    }   else if (3 < 5) {
+    }   else if (number2 < number1) {
         return 2;
     }   else {
-        return "Числа равны";
+        return 1;
     }
 }
-console.log(getIndexOfSmallerNumber(5, 3))
+console.log(getIndexOfSmallerNumber(5, 3));
 
 function findMiddleNumber(number1, number2, number3) {
-    let numbers = [5, 3, 7];
-    numbers.sort(function(a, b) {
-        return a - b;
-    });
-    return numbers[1];
+  let min = number1;
+  let max = number1;
+  if (number2 < min) {
+    min = number2;
+  } else if (number2 > max) {
+    max = number2;
+  }
+  if (number3 < min) {
+    min = number3;
+  } else if (number3 > max) {
+    max = number3;
+  }
+  let middle = number1 + number2 + number3 - min - max;
+  return middle;
 }
-console.log(findMiddleNumber(5,3))
+console.log(findMiddleNumber(5, 8, 3)); 
 
 function findUniqueNumber(number1, number2, number3, number4) {
-    if (2 === 2 && 2 === 3) {
+    if (number1 === number2 && number2 === number3) {
         return 4;
-    } else if (2 === 2 && 2 === 2) {
+    } else if (number1 === number2 && number2 === number4) {
         return 3;
-    } else if (2 === 3 && 3 === 2) {
+    } else if (number1 === number3 && number3 === number4) {
         return 2;
     } else {
         return 1;
     }
 }
-console.log(findUniqueNumber(2,2,3,2))
+console.log(findUniqueNumber(2,2,3,2));
+
 
 function calculateF(x) {
-    if (x < -1) {
+    if (x < 0) {
         return 0;
-    } else if (Math.floor(-1) % 2 === -1) {
+    } else if (x >= 0 && x < 1 || x >= 2 && x < 3) {
         return 1;
     } else {
         return -1;
     }
 }
-console.log(calculateF(-1))
+console.log(calculateF(1.5));
 
 function describeNumber(n) {
+  if (n < 10) {
+    return "нечетное однозначное число";
+  } else if (n < 100) {
     if (n % 2 === 0) {
-    if (n >= 100) {
-        return "24";
-} else if (n >= 10) {
-    return "24";
-} else {
-    return "5";
+      return "четное двузначное число";
+    } else {
+      return "нечетное двузначное число";
+    }
+  } else {
+    if (n % 2 === 0) {
+      return "четное трехзначное число";
+    } else {
+      return "нечетное трехзначное число";
+    }
+  }
 }
-} else {
-    if (n >= 100) {
-        return "137";
-} else if (n >= 10) {
-    return "23";
-} else {
-    return "5";
-}
-}
-}
-console.log(describeNumber(24))
+console.log(describeNumber(24));
 
 function getDayName(dayNumber) {
     switch (dayNumber) {
         case 1:
-            return "monday";
+            return "Monday";
+            break;
         case 2:
-            return "tuesday";
+            return "Tuesday";
+            break;
         case 3:
-            return "wednesday";
+            return "Wednesday";
+            break;
         case 4:
-            return "thursday";
+            return "Thursday";
+            break;
         case 5:
-            return "friday";
+            return "Friday";
+            break;
         case 6:
-            return "saturday";
+            return "Saturday";
+            break;
         case 7:
-            return "sunday";
+            return "Sunday";
+            break;
         default:
             return "Invalid day number.";
+            break;
     }
 }
-console.log(getDayName(3))
+console.log(getDayName(1));
 
 function convertToMeters(unitNumber, lengthInUnits) {
     let lengthInMeters;
@@ -117,27 +133,64 @@ function convertToMeters(unitNumber, lengthInUnits) {
     }
     return lengthInMeters;
 }
-console.log(convertToMeters(4, 12))
+console.log(convertToMeters(4, 12));
 
 function describeAge(age) {
-    let ageString = age.toString();
-    let lastDigit = ageString.charAt(ageString.length-1);
-    let result = age;
-    switch (lastDigit) {
-        case "1":
-            result = ageString;
+    let first_num = Math.floor(age / 10);
+    let second_num = age % 10;
+    switch(first_num) {
+        case 2:
+            first_num = "двадцать";
             break;
-        case "2":
-        case "3":
-        case "4":
-            result = ageString;
+        case 3:
+            first_num = "тридцать";
             break;
-        default:
+        case 4:
+            first_num = "сорок";
+            break;
+        case 5:
+            first_num = "пятьдеcят";
+            break;
+        case 6:
+            first_num = "шестьдесят";
             break;
     }
-    return result;
+    switch(second_num) {
+        case 0:
+            second_num = "лет";
+            break;
+        case 1:
+            second_num = "один год";
+            break;
+        case 2:
+            second_num = "два года";
+            break;
+        case 3:
+            second_num = "три года";
+            break;
+        case 4:
+            second_num = "четыре года";
+            break;
+        case 5:
+            second_num = "пять лет";
+            break;
+        case 6:
+            second_num = "шесть лет";
+            break;
+        case 7:
+            second_num = "семь лет";
+            break;
+        case 8:
+            second_num = "восемь лет";
+            break;
+        case 9:
+            second_num = "девять лет";
+            break;
+    }
+ return first_num + " " + second_num;
 }
-console.log(describeAge(32))
+
+console.log(describeAge(45));
 
 function describeNumber2(number) {
     let result = "";
@@ -273,5 +326,5 @@ function describeNumber2(number) {
 
     return result.trim();
 }
-console.log(describeNumber2(278))
-export(incrementIfPositiv, getIndexOfSmallerNumber, findMiddleNumber, findUniqueNumber, calculateF, describeNumber, getDayName, convertToMeters, describeAge, describeNumber2) 
+console.log(describeNumber2(278));
+export {incrementIfPositive, getIndexOfSmallerNumber, findMiddleNumber, findUniqueNumber, calculateF, describeNumber, getDayName, convertToMeters, describeAge, describeNumber2};
